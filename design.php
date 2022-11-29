@@ -1,0 +1,511 @@
+<?php
+
+
+//====================================//
+$order = json_decode($_GET['order'], true); 
+
+if($order['customer']['invoice_customers_name'])
+$ClientName=$order['customer']['invoice_customers_name'];
+if($order['customer']['invoice_customers_address_line1'])
+$ClientAddress=$order['customer']['invoice_customers_address_line1'];
+if($order['customer']['invoice_customers_address_line2'])
+$ClientAddress=$order['customer']['invoice_customers_address_line2'];
+if($order['customer']['invoice_customers_city'])
+$ClientCity=$order['customer']['invoice_customers_city'];
+if($order['customer']['invoice_customers_state'])
+$ClientState=$order['customer']['invoice_customers_state'];
+if($order['customer']['invoice_customers_postcode'])
+$ClientPostcode=$order['customer']['invoice_customers_postcode'];
+if($order['customer']['invoice_customers_country'])
+$ClientCountry=$order['customer']['invoice_customers_country'];
+if($order['customer']['invoice_customers_telephone'])
+$ClientTelephone=$order['customer']['invoice_customers_telephone'];
+if($order['customer']['invoice_customers_email_address'])
+$ClientEmail=$order['customer']['invoice_customers_email_address'];
+//====================================//
+
+ ?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahatta Multimedia Tax Invoice</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="top_bar_parent" >
+        <div class="top_bar"></div>
+    </div>
+    <div class="main_cont" >
+
+        <div id="container"  >
+            <!-- <header> -->
+            <div id="navbar-brand" style="padding-left:30px;"><img src="images/logo_mahatta_multimedia.png" height="50" alt="Invoice">
+                <div class="social_icon" style="padding-right:30px;">
+                    <ul>
+                        <li><img src="images/telephone.png" alt="telephone" width="20px"></li>
+                        <li style="color:#ababaf; font-size:medium;">+91 11 41470000</li>
+                    </ul>
+                    <ul>
+                        <li><img src="images/mail.png" alt="telephone" width="20px"></li>
+                        <li style="color:#ababaf;font-size:medium;">info@indipicture.in</li>
+                    </ul>
+                    <ul>
+                        <li><img src="images/Internet.png" alt="telephone" width="20px"></li>
+                        <li style="color:#ababaf;font-size:medium;">www.indiapicture.in</li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <!-------end----- <header> -->
+
+
+                
+                
+            <!-----------Tax Invoice -->
+                
+                <div class="tx_inv">
+                    <div class="tax_invoice">
+                        <h3 style="padding-top: 80px;" align="center">TAX INVOICE</h3>
+                    </div>
+                </div>
+
+            
+            <!-- --------------------ORIGINAL FOR RECIPIENT----------------------- -->
+            
+            <div style="font-weight: bold;padding-top: 40px; padding-left: 95px;">
+                <h4>ORIGINAL FOR RECIPIENT <?php echo $ClientName; ?></h4>
+            </div>
+
+            <div style="width: 800px; height: 365px;padding-left: 95px;">
+                <table border="1" cellspacing="0">
+
+                    <tbody>
+                        <tr>
+                            <td style="font-weight: bold;font-size:large;" align="right">
+                                Invoice No
+                            </td>
+                            <td>
+                                : 2021-22/Sep/0042
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Invoice Date
+                            </td>
+                            <td>
+                                :03/09/2021
+                            </td>
+                            <td>
+                                
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                PO Number
+                            </td>
+                            <td>
+                                NA
+                            </td>
+                            <td style="font-weight: bold;" >
+                                PO Date
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                GSTIN:
+                            </td>
+                            <td style="font-weight: bold;">
+                                07AAECM4064D1ZQ
+                            </td>
+                            <td>
+                                PAN No. Is: AAECM4064D
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                HSN / SAC:
+                            </td>
+                            <td style="font-weight: bold;">
+                                997339
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Description of Service
+                            </td>
+                            <td style="font-weight: bold;">
+                                Licensing services for the right to use<br>
+                                other intellectual property products and<br>
+                                other resources N.E.C.
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                MSME UAM No.
+                            </td>
+                            <td style="font-weight: bold;">
+                                : DL08E0023359
+
+                            </td>
+                            <td>
+                     
+                </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                            <td style="font-weight: bold; background-color:#c4c4c6">
+                                CUSTOMER DETAILS
+
+                            </td>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Customer GST No.
+                            </td>
+                            <td>
+                                27AAPFG8507M1ZQ
+
+                            </td>
+                            <td align="left">
+                                PAN NO: AAPFG8507M
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Place of Supply
+                            </td>
+                            <td>
+                                : Maharashtra
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                PAN NO: AAPFG8507M
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Contact Person :
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Address
+                            </td>
+                            <td>
+                                : A-337 Orchard Road Mall, 2nd Floor, Royal Palms, Goregaon (E), - 400 065, India, India
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                State
+                            </td>
+                            <td>
+                                : Maharashtra
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="font-weight: bold;" align="right">
+                                Contact Details:
+                            </td>
+                            <td>
+                                9819007177, dheer.gb@gmail.com
+                            </td>
+                            <td>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- --------------end----------ORIGINAL FOR RECIPIENT----------------------- -->
+   
+   
+   
+   
+            <!-- ----------------------- Transaction----------------------- -->
+   
+   
+               <div style="padding-top: 120px;padding-left: 95px;">
+   
+                   <h4>TAX PAID ON REVERSE CHARGES: NO </h4>
+                   <h4><span style="background-color:#c4c4c6">* Payment Terms: - agrees to make the payment by
+                           03/09/2021.</span> </h4>
+   
+               </div>
+   
+   
+               <div style="padding:30px 0 0px 95px;; font-weight: bold;"><h4>Transaction Summary</h4></div>
+   
+               <div style="width: 500px; height: 170px; padding-left: 95px;">
+                   <table  border="1" cellspacing="0">
+             
+   
+                       <tbody>
+                           <tr>
+                               <td style="font-weight: bold;">
+                                   S.No.
+                               </td>
+                               <td style="font-weight: bold;">
+                                   Description
+                               </td>
+                               <td style="font-weight: bold;">
+                                   Qty.
+                               </td>
+                               <td style="font-weight: bold;">
+                                   Rate (Rs.)
+                               </td>
+                               <td style="font-weight: bold;">
+                                   Price (Rs.)
+                               </td>
+                           </tr>
+                           <tr>
+                               <td align="center">
+                                   1
+                               </td>
+                               <td>
+                                   <span style="font-weight: bold;"> License fee</span><br>
+                                   <span style="font-weight: bold;">Image ID:</span> DPPS_96386708<br>
+                                   <span style="font-weight: bold;">Image Caption: </span>PLANTING TREE PROCESS<br>
+                                   <span style="font-weight: bold;">Collection:</span> IPIP, <span
+                                       style="font-weight: bold;">Image Type:</span> RF, <span
+                                       style="font-weight: bold;">File Size: </span> LARGEST<br>
+                                   <span style="font-weight: bold;">Model Release:</span> No,<span
+                                       style="font-weight: bold;">Property Release:</span> No<br>
+                                   <span style="font-weight: bold;">Image Usage Given Below: -</span> <br>
+                                   <span style="font-weight: bold;">Usage:</span> None
+                               </td>
+                               <td align="center">
+                                   1
+                               </td>
+                               <td align="right">
+                                   3500
+                               </td>
+                               <td align="right">
+                                   3500
+                               </td>
+                           </tr>
+                       </tbody>
+                   </table>
+               </div>
+   
+               
+               
+               <div class="total" style="padding: 20px 105px 0 0;">
+               <table>
+               <tbody>
+                   <tr>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                       
+                       </td>
+                       <td style="font-weight: bold;" align="right">
+                           Sub Total (Rs.): 3500
+                       </td>
+                   </tr>
+   
+                   <tr>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td style="font-weight: bold;" align="right">
+                           IGST (12) %: 420.00
+                       </td>
+                   </tr>
+                   <tr>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td style="font-weight: bold;">
+                           
+                       </td>
+                       <td style="font-weight: bold;" align="right">
+                           Grand Total (Rs.):3920.00
+                           
+                       </td>
+                   <tr>
+                       <td style="padding-top: 80px;">
+                           Receiver's Signature
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td>
+                           
+                       </td>
+                       <td align="right" style="line-height: 50px;">
+                          <span style="font-weight: bold;"> For Mahatta Multimedia Pvt. Ltd.</span><br>
+                           <p>Authorised Signatory</p>
+                           
+                       </td>
+                   </tr>
+               </tbody>
+           </table>
+       </div>
+            <!-- --------------end---------- Transaction----------------------- -->
+   
+   
+   
+   
+            <!-- ------------------------ mkt. and cust.care----------------------- -->
+   
+               <div style="padding:150px 95px 0 95px;">
+                   <p><span style="font-weight: bold;">Sales Person:</span> - Babita Sharma, Contact No- +91-9599648838,<br>
+                       E-mail: -marketing@indiapicture.in </p>
+                   <p><span style="font-weight: bold;">Client Servicing:</span> - Geetanshul, Contact No- +91-8448539407,<br>
+                       E-mail: -care@indiapicture.in
+                   </p>
+               </div>
+   
+               <!-- --------------------terms and condition--------------------- -->
+            
+                   <div style="padding:30px 95px 0 95px;" >
+                   <p >• ON <span style="font-weight: bold;">IMAGE USAGE </span> </p>
+   
+                   <p>• I have read and agree to the terms and conditions as stated in the EULA <a href="#">Click Here</a>.
+                   </p>
+                   <p>• Once the High-Resolution images are delivered the image is considered licensed, &nbsp;&nbsp;&nbsp;&nbsp;irrespective of the
+                       usage and  it entitles the client to pay for the same. </p>
+                   <p>• The license fee is for non-exclusive usage of the image. </p>
+                   <p>• Rights Managed  (RM)  images are licensed for specific usage as described  in  the  image &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  &nbsp;&nbsp; details. It cannot be used for any other usage. </p>
+                   <p>• Royalty Free (RF) images may be used for any usage for the particular client identified. RF &nbsp;&nbsp;  images
+                       once delivered will not be cancelled.
+                   </p>
+               </div>
+   
+             
+                   <div style="padding:30px 95px 0 95px;" >
+                   <p><span style="font-weight: bold;">&nbsp;&nbsp;&nbsp;FOR PAYMENT </span> </p>
+   
+                   <p>• Payments must be cleared for all images for which high resolution images have been &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp;     delivered. </p>
+                   <p>• In case of payment by cheque, please make the cheque in favor of "Mahatta Multimedia Pvt. &nbsp;&nbsp; Ltd."
+                   </p>
+                   <p>• In case of any disputes, they will be subject to Jurisdiction of Delhi Courts. </p>
+                   <p>• India Picture reserves the right to review and change any of the above terms and conditions &nbsp;&nbsp;&nbsp; without
+                       any prior notice. This includes any changes in licensing fees also. </p>
+               </div>
+               <!-- -----------end---------terms and condition--------------------- -->
+   
+               
+               <!-- ---------------------foooter---------------------- -->
+               <div style="padding-top: 50px;"><img src="images/footer_bar.png" width="100%" height="1px" alt="bottom_Line"></div>
+                   <div style=" height: 170px; padding: 10px 0px 0px 95px;">
+                       <table>
+                           <tbody >
+                               <tr>
+                                   <td >
+                                       <div class="mm_address">
+                                           <h3 style="color: #4b110b;text-align: center;">Mahatta
+                                               Multimedia,<br> Pvt. Ltd.</h3>
+                                           <p style="color: #808184;text-align: center;font-size: x-small;">
+                                               Building No.17, Street No.8,
+                                               Sarvapriya Vihar, New Delhi
+                                               110016 (INDIA)  <span style="color: #4b110b;font-size: x-small;"><br>CIN </span>
+                                               U74300DL2005PTC135060</p>
+   
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="IP_logo"  align="right">
+                                           <p style="color: #808184;font-size: xx-small;padding-right:42px;">Our Initiatives:</p>
+                                           <img src="images/IP_color_logo.png" alt="IP" width="100px">
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="IPB_logo" align="right">
+                                           <img src="images/IPB_color_logo.png" alt="IPB" width="100px">
+   
+                                       </div>
+                                   </td>
+                                   <td>
+                                       <div class="Shutter_stock_logo" align="right">
+                                           <p style="color: #808184;font-size: xx-small;padding-right:22px;">Our Representation:</p>
+                                           <img src="images/shutterstock_logo.png" alt="IPB" width="100px">
+                                       </div>
+                                   </td>
+                               </tr>
+                           </tbody>
+                       </table>
+                   </div>
+   
+               <!-- ------------end---------foooter---------------------- -->
+   
+               </div>
+           </div>
+       </body>
+       </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
